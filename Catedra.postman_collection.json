@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "dea5642f-d49a-427e-8666-d372864ee2ac",
+		"name": "Catedra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33696564"
+	},
+	"item": [
+		{
+			"name": "Crear libro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/ebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener libros",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Libro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"EL destructor de mund\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ebook/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ebook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar disponibilidad libro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/ebook/1/change-availability",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ebook",
+						"1",
+						"change-availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incrementar Stock Libro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ebook/1/increment-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ebook",
+						"1",
+						"increment-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comprar libro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"EL destructor de mundos\",\r\n    \"Author\": \"Yo\",\r\n    \"Genre\": \"Destino\",\r\n    \"Format\": \"Epico\",\r\n    \"IsAvailable\": true,\r\n    \"Price\": 10000,\r\n    \"Stock\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ebook/1/purcharse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ebook",
+						"1",
+						"purcharse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ebook/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ebook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
